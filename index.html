@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Student First Class — Finishing Proposal</title>
+<meta name="description" content="A proposal to finish the remaining UI on the Student First Class questionnaire, without rebuilding the flow, scoring, or theme." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%230B1420%22/><circle cx=%2250%22 cy=%2250%22 r=%2222%22 fill=%22%23C79A46%22/></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,400;0,500;0,600;1,500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="rail" aria-hidden="true"></div>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="kicker">A proposal for Student First Class</p>
+    <h1>Finish what's already working.</h1>
+    <p class="lede">
+      Intro, pre-selection, sixty items across ten sections, email verification, ranked results —
+      the flow runs end to end and the scoring stays on your Python backend, untouched.
+      What's left is the UI: spacing, the Likert scale, transitions, and mobile. That's the whole job.
+    </p>
+
+    <ol class="flow" id="hero-flow" aria-label="Questionnaire flow, all stages complete">
+      <li class="flow__step" data-state="done"><span class="flow__dot"></span><span class="flow__label">Intro</span></li>
+      <li class="flow__step" data-state="done"><span class="flow__dot"></span><span class="flow__label">Pre-selection</span></li>
+      <li class="flow__step" data-state="done"><span class="flow__dot"></span><span class="flow__label">Questionnaire</span></li>
+      <li class="flow__step" data-state="done"><span class="flow__dot"></span><span class="flow__label">Verify</span></li>
+      <li class="flow__step" data-state="done"><span class="flow__dot"></span><span class="flow__label">Results</span></li>
+    </ol>
+
+    <div class="byline">
+      <span>Prepared by Joshua — full-stack developer</span>
+      <span class="byline__sep"></span>
+      <span>github.com/cyberrar-kia</span>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="sec" id="understanding">
+    <div class="wrap">
+      <p class="sec__num">1 — What's already built</p>
+      <p>
+        A user opens the intro, enters a name, and starts the test. Before any questions,
+        they choose which sectors and work domains to include or avoid — that choice narrows
+        the job pool for everything that follows, and it isn't optional in the flow.
+      </p>
+      <p>
+        Then ten sections of six items each, one section at a time, question order randomised
+        inside each section, answers saved as they go so a refresh doesn't cost anything.
+        Submission is blocked until every item has an answer.
+      </p>
+      <p>
+        After submitting, a six-digit code confirms the result belongs to them — nothing is
+        stored until that code is entered correctly. Ranked results and their explanations
+        come straight from your existing scoring engine, in French, with post-results filters.
+        None of that logic changes.
+      </p>
+    </div>
+  </section>
+
+  <section class="sec" id="approach">
+    <div class="wrap">
+      <p class="sec__num">2 — What I'll finish</p>
+
+      <ol class="flow flow--compact" aria-label="Stages needing UI work: pre-selection and questionnaire">
+        <li class="flow__step" data-state="dim"><span class="flow__dot"></span><span class="flow__label">Intro</span></li>
+        <li class="flow__step" data-state="focus"><span class="flow__dot"></span><span class="flow__label">Pre-selection</span></li>
+        <li class="flow__step" data-state="focus"><span class="flow__dot"></span><span class="flow__label">Questionnaire</span></li>
+        <li class="flow__step" data-state="dim"><span class="flow__dot"></span><span class="flow__label">Verify</span></li>
+        <li class="flow__step" data-state="dim"><span class="flow__dot"></span><span class="flow__label">Results</span></li>
+      </ol>
+
+      <ul class="list">
+        <li>Full walkthrough of the live flow on desktop and mobile before touching any code</li>
+        <li>Spacing and layout pass across the questionnaire</li>
+        <li>Likert scale styled and made consistent across all ten sections</li>
+        <li>Section transitions cleaned up</li>
+        <li>Pre-selection screen finished</li>
+        <li>Mobile layout fixed for every step, not just the questionnaire</li>
+        <li>Confirm the guardrails hold: no skipping a section, no submitting incomplete, draft still restores after refresh</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" id="boundaries">
+    <div class="wrap">
+      <p class="sec__num">3 — What stays untouched</p>
+      <p>
+        Scoring, ranking, and the API don't get touched. The navy, gold, and cream theme stays
+        as it is — this is a finishing pass, not a new design system. If a redesign is wanted
+        later, that's a separate, clearly scoped job.
+      </p>
+    </div>
+  </section>
+
+  <section class="sec" id="timeline">
+    <div class="wrap">
+      <p class="sec__num">4 — Timeline</p>
+      <ol class="steps">
+        <li>
+          <span class="steps__day">Day 0</span>
+          <span class="steps__text">Repo access, full walkthrough on desktop and mobile, a short list of the fixes needed</span>
+        </li>
+        <li>
+          <span class="steps__day">Day 1</span>
+          <span class="steps__text">Fixes go in, first preview link back to you</span>
+        </li>
+        <li>
+          <span class="steps__day">Day 1–2</span>
+          <span class="steps__text">Second pass on your feedback, then a short note on the files touched and what to click to verify</span>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec" id="proof">
+    <div class="wrap">
+      <p class="sec__num">5 — Similar work</p>
+      <p>
+        This is a repo I finished the same way — joined an existing multi-step flow,
+        kept the design as-is, and closed the remaining UI states without touching the backend.
+      </p>
+      <!-- TODO(Joshua): replace href below with your real example link (a quiz, onboarding, or Likert-style form) before sending -->
+      <a class="proof-link" id="proof-link" href="https://github.com/cyberrar-kia" target="_blank" rel="noopener">
+        <span>Reference project</span>
+        <span class="proof-link__arrow" aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="close">
+  <div class="wrap">
+    <p class="sec__num sec__num--dark">Terms</p>
+    <p class="close__price">$50 fixed, scoped to the UI work above.</p>
+    <p class="close__note">
+      If you'd like the redesign or further work on the repo afterward, happy to quote that
+      as a separate milestone.
+    </p>
+    <a class="cta" href="https://www.upwork.com/jobs/~022101019711410382552" target="_blank" rel="noopener">
+      Open the job on Upwork
+    </a>
+    <p class="close__foot">Joshua — full-stack developer · github.com/cyberrar-kia</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
